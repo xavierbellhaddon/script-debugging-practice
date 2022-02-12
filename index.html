@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Script debugging practice</title>
+	<link rel="stylesheet" href="./index.css">
+</head>
+<h1>Script debugging practice</h1>
+<p>The code in <code>index.js</code> is running <i>a lot</i> of operations to figure out if a script published by ACME software is somewhere on the page. It's also throwing an error &ndash; check the browser dev console to see for yourself!.</p>
+<p>
+	Your tasks are:
+</p>
+<ol>
+	<li>Review the code in <code>index.js</code> to understand what it's doing</li>
+	<li>Eliminate the error being printed to the browser console. Why is that error showing up? What JavaScript can you add or change so that the script does not throw this error?</li>
+	<li>Note how many operations are reported in the browser console. How can you reduce the number of operations performed when
+		<ul>
+			<li>
+				an ACME software <i>is not</i> present on the page?
+			</li>
+			<li>an ACME software script <i>is</i> present on the page? &#40;check coments in this HTML file, near the closing <code>&lt;&sol;body&gt;</code> tag&#41;</li>
+		</ul>
+	</li>
+</ol>
+
+<div class="report js-report">
+	<h2>Efficiency report</h2>
+	<p>Generating report...</p>
+</div>
+
+<body>
+	<script src="./lib/script-1.js"></script>
+	<script src="./lib/script-2.js"></script>
+	<script src="./lib/script-3.js"></script>
+	<script src="./lib/script-4.js"></script>
+	<script src="./lib/script-5.js"></script>
+	<script src="./lib/script-6.js"></script>
+	<script src="./lib/script-7.js"></script>
+	<script src="./lib/script-8.js"></script>
+	<script src="./lib/script-9.js"></script>
+	<script src="./lib/script-10.js"></script>
+	<script src="./lib/script-11.js"></script>
+	<script src="./lib/script-12.js"></script>
+	<script src="./lib/script-13.js"></script>
+	<script src="./lib/script-14.js"></script>
+	<script src="./lib/script-15.js"></script>
+	<script src="./lib/script-16.js"></script>
+	<script src="./lib/script-17.js"></script>
+	<script src="./lib/script-18.js"></script>
+	<script src="./lib/script-19.js"></script>
+	<script src="./lib/script-20.js"></script>
+	<script src="./lib/script-21.js"></script>
+	<script src="./lib/script-22.js"></script>
+	<script src="./lib/script-23.js"></script>
+	<script src="./lib/script-24.js"></script>
+	<script src="./lib/script-25.js"></script>
+
+	<!-- Un-comment the next line to test what happens when `index.js` can locate a ACME software script. -->
+	<!-- <script src="./lib/acme-software/main_v4_pro.js"></script> -->
+	<script src="./index.js"></script>
+</body>
+</html>
