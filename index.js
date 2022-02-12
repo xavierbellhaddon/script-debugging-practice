@@ -75,7 +75,7 @@ window.onload = function () {
 					}
 				}
 			} else {
-				if (!acmeScriptFoundAfterSecondSearch) {
+				if (!acmeScriptFoundAfterSecondSearch && firstElementToRemove && secondElementToRemove) {
 					/**
 					 * What is this code trying to do to `firstElementToRemove`
 					 * and `secondElementToRemove`? Why is it producing an error?
