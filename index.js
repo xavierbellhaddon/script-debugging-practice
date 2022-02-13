@@ -98,13 +98,13 @@ window.onload = function () {
 					 * these elements do or don't exist?
 					 */
 
+					firstElementToRemove = document.getElementById('remove-me')
 					if (firstElementToRemove) {
-						firstElementToRemove = document.getElementById('remove-me')
 						firstElementToRemove.parentNode.removeChild(firstElementToRemove)
 					}
 
+					secondElementToRemove = document.getElementById('remove-me-too')
 					if (secondElementToRemove) {
-						secondElementToRemove = document.getElementById('remove-me-too')
 						secondElementToRemove.parentNode.removeChild(secondElementToRemove)
 					}
 				}
