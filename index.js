@@ -39,17 +39,8 @@ var acmeScriptFoundAfterSecondSearch = false
 window.onload = function () {
 	allScriptsOnPage = document.getElementsByTagName('script')
 	for (var i = 0; i < allScriptsOnPage.length; i++) {
-		for (
-			var j = 0;
-			j < acmeSoftwareScriptPaths.length;
-			j++, firstCheckOpsCount++
-		) {
-			if (
-				allScriptsOnPage[i].src.includes(acmeSoftwareScriptPaths[j].regular) ||
-				allScriptsOnPage[i].src.includes(acmeSoftwareScriptPaths[j].pro)
-			) {
-				acmeScriptTagFoundAfterFirstSearch = true
-			}
+		if (allScriptsOnPage[i].src.includes("acme")) {
+			acmeScriptTagFoundAfterFirstSearch = true;
 		}
 	}
 
@@ -58,20 +49,9 @@ window.onload = function () {
 			if (numIntervalsExecuted < 5) {
 				numIntervalsExecuted++
 				allScriptsOnPage = document.getElementsByTagName('script')
-				for (var i = 0; i < allScriptsOnPage.length; i++) {
-					for (
-						var j = 0;
-						j < acmeSoftwareScriptPaths.length;
-						j++, secondCheckOpsCount++
-					) {
-						if (
-							allScriptsOnPage[i].src.includes(
-								acmeSoftwareScriptPaths[j].regular
-							) ||
-							allScriptsOnPage[i].src.includes(acmeSoftwareScriptPaths[j].pro)
-						) {
-							acmeScriptFoundAfterSecondSearch = true
-						}
+				for (var i = 0; i < allScriptsOnPage.length; i++) {		
+					if (allScriptsOnPage[i].src.includes("acme")) {
+						acmeScriptTagFoundAfterFirstSearch = true;
 					}
 				}
 			} else {
