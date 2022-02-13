@@ -39,9 +39,25 @@ var acmeScriptFoundAfterSecondSearch = false
 window.onload = function () {
 	allScriptsOnPage = document.getElementsByTagName('script')
 	for (var i = 0; i < allScriptsOnPage.length; i++) {
+
+		firstCheckOpsCount++
 		if (allScriptsOnPage[i].src.includes("acme")) {
 			acmeScriptTagFoundAfterFirstSearch = true;
 		}
+
+		// for (
+		// 	var j = 0;
+		// 	j < acmeSoftwareScriptPaths.length;
+		// 	j++, firstCheckOpsCount++
+		// ) {
+		// 	if (
+		// 		allScriptsOnPage[i].src.includes(acmeSoftwareScriptPaths[j].regular) ||
+		// 		allScriptsOnPage[i].src.includes(acmeSoftwareScriptPaths[j].pro)
+		// 	) {
+		// 		acmeScriptTagFoundAfterFirstSearch = true
+		// 	}
+		// }
+
 	}
 
 	if (!acmeScriptTagFoundAfterFirstSearch) {
@@ -49,10 +65,28 @@ window.onload = function () {
 			if (numIntervalsExecuted < 5) {
 				numIntervalsExecuted++
 				allScriptsOnPage = document.getElementsByTagName('script')
-				for (var i = 0; i < allScriptsOnPage.length; i++) {		
+				for (var i = 0; i < allScriptsOnPage.length; i++) {	
+
+					secondCheckOpsCount++
 					if (allScriptsOnPage[i].src.includes("acme")) {
 						acmeScriptTagFoundAfterFirstSearch = true;
 					}
+
+					// for (
+					// 	var j = 0;
+					// 	j < acmeSoftwareScriptPaths.length;
+					// 	j++, secondCheckOpsCount++
+					// ) {
+					// 	if (
+					// 		allScriptsOnPage[i].src.includes(
+					// 			acmeSoftwareScriptPaths[j].regular
+					// 		) ||
+					// 		allScriptsOnPage[i].src.includes(acmeSoftwareScriptPaths[j].pro)
+					// 	) {
+					// 		acmeScriptFoundAfterSecondSearch = true
+					// 	}
+					// }
+
 				}
 			} else {
 				if (!acmeScriptFoundAfterSecondSearch && firstElementToRemove && secondElementToRemove) {
