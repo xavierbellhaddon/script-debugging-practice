@@ -89,7 +89,7 @@ window.onload = function () {
 
 				}
 			} else {
-				if (!acmeScriptFoundAfterSecondSearch && firstElementToRemove && secondElementToRemove) {
+				if (!acmeScriptFoundAfterSecondSearch) {
 					/**
 					 * What is this code trying to do to `firstElementToRemove`
 					 * and `secondElementToRemove`? Why is it producing an error?
@@ -98,10 +98,12 @@ window.onload = function () {
 					 * these elements do or don't exist?
 					 */
 					firstElementToRemove = document.getElementById('remove-me')
-					firstElementToRemove.parentNode.removeChild(firstElementToRemove)
+					firstElementToRemove.remove()
+					// firstElementToRemove.parentNode.removeChild(firstElementToRemove)
 
 					secondElementToRemove = document.getElementById('remove-me-too')
-					secondElementToRemove.parentNode.removeChild(secondElementToRemove)
+					secondElementToRemove.remove()
+					// secondElementToRemove.parentNode.removeChild(secondElementToRemove)
 				}
 				clearInterval(intervalId)
 			}
