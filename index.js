@@ -97,13 +97,16 @@ window.onload = function () {
 					 * How can you allow this script to run without errors whether
 					 * these elements do or don't exist?
 					 */
-					firstElementToRemove = document.getElementById('remove-me')
-					firstElementToRemove.remove()
-					// firstElementToRemove.parentNode.removeChild(firstElementToRemove)
 
-					secondElementToRemove = document.getElementById('remove-me-too')
-					secondElementToRemove.remove()
-					// secondElementToRemove.parentNode.removeChild(secondElementToRemove)
+					if (firstElementToRemove) {
+						firstElementToRemove = document.getElementById('remove-me')
+						firstElementToRemove.parentNode.removeChild(firstElementToRemove)
+					}
+
+					if (secondElementToRemove) {
+						secondElementToRemove = document.getElementById('remove-me-too')
+						secondElementToRemove.parentNode.removeChild(secondElementToRemove)
+					}
 				}
 				clearInterval(intervalId)
 			}
