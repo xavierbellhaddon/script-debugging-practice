@@ -41,6 +41,7 @@ window.onload = function () {
 	for (var i = 0; i < allScriptsOnPage.length; i++, firstCheckOpsCount++) {
 		if (allScriptsOnPage[i].src.includes("acme")) {
 			acmeScriptTagFoundAfterFirstSearch = true;
+			break;
 		}
 	}
 
@@ -52,6 +53,7 @@ window.onload = function () {
 				for (var i = 0; i < allScriptsOnPage.length; i++, secondCheckOpsCount++) {	
 					if (allScriptsOnPage[i].src.includes("acme")) {
 						acmeScriptTagFoundAfterFirstSearch = true;
+						break;
 					}
 				}
 			} else {
